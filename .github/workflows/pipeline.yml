@@ -56,7 +56,6 @@ jobs:
           ARTIFACT_REGISTRY: ${{ secrets.ARTIFACT_REGISTRY }}
         run: | 
           docker build -t ${{ secrets.ARTIFACT_REGISTRY }}/myapp:latest .
-          echo '✅ ${{ secrets.ARTIFACT_REGISTRY }}/myapp:latest'
           docker push ${{ secrets.ARTIFACT_REGISTRY }}/myapp:latest
 
   DeployHom:
